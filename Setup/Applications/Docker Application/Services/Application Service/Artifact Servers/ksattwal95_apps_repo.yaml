@@ -1,0 +1,4 @@
+harnessApiVersion: '1.0'
+type: DOCKER
+imageName: ksattwal95/apps_repo
+serverName: Harness Docker Hub
