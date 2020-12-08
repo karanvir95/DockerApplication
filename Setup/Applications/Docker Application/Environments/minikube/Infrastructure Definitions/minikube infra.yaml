@@ -5,5 +5,5 @@ deploymentType: KUBERNETES
 infrastructure:
 - type: DIRECT_KUBERNETES
   cloudProviderName: Kubernetes Cluster
-  namespace: default
+  namespace: account-kbklsz
   releaseName: release-${infra.kubernetes.infraId}
