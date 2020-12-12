@@ -39,10 +39,15 @@ pipelineStages:
   name: Approval 2
   parallel: false
   properties:
-    userGroups:
-    - Account Administrator
-    workflowVariables: null
+    userGroups: null
+    variables: null
     stageName: STAGE 3
+    templateExpressions:
+    - expression: ${User_Group}
+      fieldName: userGroups
+      metadata:
+        entityType: USER_GROUP
+        relatedField: ''
     timeoutMillis: 86400000
     approvalStateType: USER_GROUP
     sweepingOutputName: ''
