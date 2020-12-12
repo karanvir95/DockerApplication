@@ -7,7 +7,17 @@ pipelineStages:
   skipCondition:
     type: DO_NOT_SKIP
   stageName: STAGE 1
-  workflowName: Dev Workflow
+  workflowName: Workflow Template
+  workflowVariables:
+  - entityType: ENVIRONMENT
+    name: Environment
+    value: dev minikube
+  - entityType: SERVICE
+    name: Service
+    value: Application Service
+  - entityType: INFRASTRUCTURE_DEFINITION
+    name: InfraDefinition_KUBERNETES
+    value: minikube infra
 - type: ENV_STATE
   name: QA Workflow
   parallel: false
