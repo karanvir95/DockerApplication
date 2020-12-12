@@ -41,7 +41,7 @@ pipelineStages:
   properties:
     userGroups:
     - Account Administrator
-    variables: null
+    workflowVariables: null
     stageName: STAGE 3
     timeoutMillis: 86400000
     approvalStateType: USER_GROUP
@@ -55,4 +55,14 @@ pipelineStages:
   skipCondition:
     type: DO_NOT_SKIP
   stageName: STAGE 4
-  workflowName: Prod Workflow
+  workflowName: Workflow Template
+  workflowVariables:
+  - entityType: ENVIRONMENT
+    name: Environment
+    value: prod minikube
+  - entityType: SERVICE
+    name: Service
+    value: Application Service
+  - entityType: INFRASTRUCTURE_DEFINITION
+    name: InfraDefinition_KUBERNETES
+    value: minikube infra
